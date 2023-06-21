@@ -1,0 +1,92 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: skyblue;
+}
+.card{
+    width: 100%;
+    max-width: 520px;
+    background-color: rgb(238, 243, 243);
+    padding: 25px;
+    border-radius: 40px;
+}
+.searchField{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;   
+}
+.searchBar{
+    border-radius: 40px;
+    text-align: center;
+    height: 30px;
+}
+.divSearchBtn{
+    padding-right: 60px; 
+}
+.searchBtn{
+    text-align: center;
+    height: 30px;
+    border: 0;
+    cursor: pointer;
+}
+.searchBtn-image{
+    width: 25px;
+    height: 25px;
+}
+
+.weatherForcastBtn{
+    border: 0;
+    cursor: pointer;
+}
+
+
+.weatherBody{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 5rem;
+    padding-top: 25px;
+    margin-bottom: 20px;
+}
+
+
+
+.weatherDetails{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 25px;
+    margin-bottom: -15px;
+}
+
+
+.lineBreak{
+    margin-bottom: -15px;
+}
+.vertical-left{
+    border-left: 1px solid;
+    height: 30px;
+    position:absolute;
+    left: 42%;
+}
+.vertical-midLeft{
+    border-left: 1px solid;
+    height: 30px;
+    position:absolute;
+    left: 46.5%;
+}
+.vertical-midRight{
+    border-left: 1px solid;
+    height: 30px;
+    position:absolute;
+    left: 52.5%;
+}
+.vertical-right{
+    border-left: 1px solid;
+    height: 30px;
+    position:absolute;
+    left: 57.5%;
+}
+
+
