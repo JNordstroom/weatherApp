@@ -21,13 +21,14 @@ function getLocation() {
     } else {
         console.log('Geolocation kan inte användas på din browser.');
         errorMessageElement.textContent = 'Geolocation kan inte användas på din browser.';
+        return;
     }
 }
 
 
 function fetchWeatherData(lat, long, city){
     let apiUrl = '';
-    errorMessageElement = ''; 
+    
     if(lat && long){
         apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&lang=sv&appid=5f8720cba1f10e09507ee30899b138a5`;
         
@@ -38,12 +39,12 @@ function fetchWeatherData(lat, long, city){
     }
     else{
         console.log('Felaktig inmatning!')
-        errorMessageElement.textContent = 'Felaktig inmatning, försök igen!'
+        errorMessageElement.textContent = 'Felaktig inmatning, försök igen!';
     }
     
     
     
-
+    
     fetch(apiUrl)
     .then((Response) => Response.json())
     .then((data) => {
@@ -87,12 +88,13 @@ function fetchWeatherData(lat, long, city){
         else if(data.weather[0].main == 'Snow'){
             iconElement.src = 'images/snow.png';
         }
+        errorMessageElement.textContent = ''; 
 
         weatherInfoElement.style.display = 'block';
     })
     .catch(error => {
         console.log('Error:', error);
-        errorMessageElement.textContent = 'Ett fel uppstod, försök igen!';
+        errorMessageElement.textContent = 'Felaktig inmatning, försök igen!';
     }); 
 };
 function searchWeatherByCity() {
@@ -106,7 +108,7 @@ function searchWeatherByCity() {
         }
         else {
             console.log('Skriv in en befintlig stad')
-            errorMessageElement.textContent = 'Skriv in en befintlig stad';
+            errorMessageElement.textContent = 'Felaktig inmatning, försök igen!';
             
         }
         
@@ -121,6 +123,12 @@ function searchWeatherByCity() {
     });
 }
 
-window.addEventListener('load', getLocation);
+
+window.addEventListener('load', () => {
+  errorMessageElement = document.getElementById('errorMessageID');
+  getLocation();
+  searchWeatherByCity();
+});
+
 
 searchWeatherByCity();
