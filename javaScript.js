@@ -9,13 +9,21 @@ const sunsetElement = document.getElementById('sunsetID');
 let errorMessageElement = document.getElementById('errorMessageID');
 
 
-function getLocation(){
-    if(navigator.geolocation.getCurrentPosition(position => {
-        const lat = position.coords.latitude;
-        const long = position.coords.longitude;
-        fetchWeatherData(lat, long);
-    }));
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            fetchWeatherData(latitude, longitude);
+        }, error => {
+            console.log('Error:', error);
+        });
+    } else {
+        console.log('Geolocation kan inte användas på din browser.');
+        errorMessageElement.textContent = 'Geolocation kan inte användas på din browser.';
+    }
 }
+
 
 function fetchWeatherData(lat, long, city){
     let apiUrl = '';
@@ -30,8 +38,9 @@ function fetchWeatherData(lat, long, city){
     }
     else{
         console.log('Felaktig inmatning!')
-        errorMessageElement.textContent = 'Felaktig inmatning, försök igen!';
+        errorMessageElement.textContent = 'Felaktig inmatning, försök igen!'
     }
+    
     
     
 
@@ -96,7 +105,9 @@ function searchWeatherByCity() {
             fetchWeatherData(null, null, city);
         }
         else {
+            console.log('Skriv in en befintlig stad')
             errorMessageElement.textContent = 'Skriv in en befintlig stad';
+            
         }
         
     };
