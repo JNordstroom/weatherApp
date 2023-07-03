@@ -4,40 +4,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Application</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./javaScript.js"></script>
+    <script src="./javaScript.js" defer></script>
 </head>
 <body>
     <div class="card">
         <div class="searchField">
-            <input type="text" class="searchBar" placeholder="Type in a city ">
-            <div class="divSearchBtn"><button class="searchBtn" > <img class="searchBtn-image" src="./images/search.png"></button> </div>
-            <button> Icon attributions</button> 
-            <div class="fiveDayWeatherForcast"> <button class="weatherForcastBtn">5 dagars prognos</div>
-
+            <input id="inputID" type="text" class="searchBar" placeholder="Type in a city ">
+            <div class="divSearchBtn"><button id="buttonID" class="searchBtn" > <img class="searchBtn-image" src="./images/search.png"></button> </div>
+            <button class="attributionBtn"> Attributions</button> 
+            <button class="weatherForcastBtn">Veckorapport</button>
         </div>
+        <div id="errorMessageID"></div>
         <div class="weatherBody">
-            <img class="sunImage" src="./images/sun.png" >
-            <h2 class="city">Hässleholm</h2>
-            <div class="temp">24°C</div>
-            <div class="weatherInfo"> soligt</div>
+            <img id="iconID" class="sunImage" src="./images/clear.png" >
+            <h2 id="cityID" class="city"> </h2>
+            <div id="tempID" class="temp"></div>
+            <div id="weatherInfoID" class="weatherInfo"> </div>
         </div>
         <div><hr class="lineBreak"></div>
+        
         <div class="weatherDetails">
             
-            <div class="humidity">80%</div>
-            <div class="vertical-left"></div>
-            
-            <div class="wind"> 1 m/s</div>
-            <div class="vertical-midLeft"></div>
-
-            <div class="UV"> UV index</div>
-            <div class="vertical-midRight"></div>
-
-            <div class="sunrise">sunrise</div>
-            <div class="vertical-right"></div>
-
-            <div class="sunset">sunset</div>
-
+            <div class="col-sm-3"> 
+                <p>Luftfuktighet:</p>
+                <div id="humidityID" class="humidity"> </div>
+            </div>
+            <div class="col-sm-3">
+                <p>Vind:</p>
+                <div id="windID" class="wind"></div>
+            </div>
+            <div class="col-sm-3">
+                <p>Soluppgång:</p>
+                <div id="sunriseID" class="sunrise"></div>
+            </div>
+            <div class="col-sm-3">
+                <p>Solnedgång:</p>
+                <div id="sunsetID" class="sunset"></div>
+            </div>
         </div>
     </div>
 
