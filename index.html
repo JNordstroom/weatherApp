@@ -7,20 +7,35 @@
     <script src="./javaScript.js" defer></script>
 </head>
 <body>
-    <div class="card">
+    <div>
         <div class="searchField">
             <input id="inputID" type="text" class="searchBar" placeholder="Type in a city ">
-            <div class="divSearchBtn"><button id="buttonID" class="searchBtn" > <img class="searchBtn-image" src="./images/search.png"></button> </div>
-            <button class="attributionBtn"> Attributions</button> 
-            <button class="weatherForcastBtn">Veckorapport</button>
+            <button id="buttonID" class="searchBtn" type="button" > 
+                <img class="searchBtn-image" src="./images/search.png" alt="search">
+            </button> 
         </div>
+        
         <div id="errorMessageID" class="errorMessage"></div>
+        
+        <div>
+            <h1 id="cityID" class="city"> </h1>
+        </div>
+
         <div class="weatherBody">
             <img id="iconID" class="sunImage" src="./images/clear.png" >
-            <h2 id="cityID" class="city"> </h2>
-            <div id="tempID" class="temp"></div>
-            <div id="weatherInfoID" class="weatherInfo"> </div>
+            
+            <div>
+                <div class="tempDegrees">
+                    <div id="tempID" class="temp"></div>
+                    <h4 class="celsiusSymbol">°C</h4>
+                </div>
+                
+                <div id="weatherInfoID" class="weatherInfo"></div>
+                
+            </div>
+            
         </div>
+        
         <div><hr class="lineBreak"></div>
         
         <div class="weatherDetails">
@@ -42,6 +57,7 @@
                 <div id="sunsetID" class="sunset"></div>
             </div>
         </div>
+       
     </div>
 
 </body>

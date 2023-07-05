@@ -6,7 +6,8 @@ const humidityElement = document.getElementById('humidityID');
 const windElement = document.getElementById('windID');
 const sunriseElement = document.getElementById('sunriseID');
 const sunsetElement = document.getElementById('sunsetID');
-let errorMessageElement = document.getElementById('errorMessageID');
+let errorMessageElement;
+
 
 
 function getLocation() {
@@ -51,7 +52,7 @@ function fetchWeatherData(lat, long, city){
         cityElement.textContent = `${data.name}`;
 
         const temperature = Math.round(data.main.temp);
-        tempElement.textContent = `${temperature.toString()}°C`;
+        tempElement.textContent = `${temperature.toString()}`;
 
         weatherInfoElement.textContent = `${data.weather[0].description}`;
 
