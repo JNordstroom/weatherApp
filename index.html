@@ -3,8 +3,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Application</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="./javaScript.js" defer></script>
+    <link rel="stylesheet" href="./dailyWeatherForcast.css">
+    <link rel="stylesheet" href="./FiveDayForcast.css">
+    <script src="./dailyWeatherForcast.js" defer></script>
 </head>
 <body>
     <div>
@@ -24,16 +25,15 @@
         <div class="weatherBody">
             <img id="iconID" class="sunImage" src="./images/clear.png" >
             
-            <div>
-                <div class="tempDegrees">
+            <div class="boxColumnsWeatherBody">
+                <div class="tempAndDegrees">
                     <div id="tempID" class="temp"></div>
                     <h4 class="celsiusSymbol">°C</h4>
                 </div>
                 
                 <div id="weatherInfoID" class="weatherInfo"></div>
                 
-            </div>
-            
+            </div> 
         </div>
         
         <div><hr class="lineBreak"></div>
@@ -58,7 +58,16 @@
             </div>
         </div>
        
+        <div class="weaklyWeatherReporBoxes">
+            <div class="boxOne"></div>
+            <div class="boxTwo"></div>
+            <div class="boxThree"></div>
+            <div class="boxFour"></div>
+            <div class="boxFive"></div>
+
+        </div>
     </div>
+    
 
 </body>
 

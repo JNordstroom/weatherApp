@@ -6,16 +6,16 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    font-weight: 600;
+    
 }
 
 
 .searchField{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly; 
+    position: relative;
     width: 500px;
     padding-top: 1rem;
-    position: relative;
+    padding-left: 35px;
 }
 .searchBar{
     flex: 1;
@@ -23,9 +23,10 @@ body{
     border-radius: 40px;
     text-align: center;
     height: 40px;
-    background: none;
+    background: #ffffffad;
     color: black;
-    border-color: black;  
+    border-color: #ffffff38;  
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 1);
 }
 .searchBtn {
     position: absolute;
@@ -42,6 +43,7 @@ body{
 }
 .searchBar::placeholder{
     font-size: 16px;
+    font-weight: 600;
 }
 .searchBar:focus{
     outline: none;
@@ -61,8 +63,16 @@ body{
 .weatherBody{
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: -20px;
-    padding-left: 50px;
+    padding-right: 20px;
+    
+}
+.boxColumnsWeatherBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .city{
     display: flex;
@@ -70,9 +80,10 @@ body{
     padding-top: 10px;
     margin-bottom: -20px;
 }
-.tempDegrees{
+.tempAndDegrees{
     display: flex;
     justify-content: center;
+    
 }
 .celsiusSymbol{
     position: relative;
@@ -83,9 +94,10 @@ body{
 .temp{
     padding-left: 20px;
     font-size: 80px;
+    font-weight: 400;
 }
 .weatherInfo{
-    padding-left: 35px;
+    padding-left: 5px;
     font-size: 20px;
 }
 .sunImage{
@@ -94,16 +106,18 @@ body{
 }
 
 /*---------------------------------*/
+.lineBreak{
+    margin-bottom: -35px;
+    border-color: #ffffffd0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+}
+/*---------------------------------*/
 
 .weatherDetails{
     display: flex;
     justify-content: space-evenly;
-    
-    padding-top: 25px;
+    padding-top: 50px;
     margin-bottom: -15px;
-}
-.lineBreak{
-    margin-bottom: -35px;
 }
 .humidity{
     display: flex;

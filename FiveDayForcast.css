@@ -1,0 +1,58 @@
+.weaklyWeatherReporBoxes {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 65px;
+    padding-left: 10px;
+    
+  }
+.boxOne{
+    height: 300px;
+    width: 100px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin-right: 10px;
+    background: #ffffffad;
+    border-color: #ffffff38;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+}
+.boxTwo{
+    height: 300px;
+    width: 100px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin-right: 10px;
+    background: #ffffffad;
+    border-color: #ffffff38;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+}
+.boxThree{
+    height: 300px;
+    width: 100px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin-right: 10px;
+    background: #ffffffad;
+    border-color: #ffffff38;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+}
+.boxFour{
+    height: 300px;
+    width: 100px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin-right: 10px;
+    background: #ffffffad;
+    border-color: #ffffff38;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+}
+.boxFive{
+    height: 300px;
+    width: 100px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin-right: 10px;
+    background: #ffffffad;
+    border-color: #ffffff38;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+}
