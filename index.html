@@ -4,18 +4,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Application</title>
     <link rel="stylesheet" href="./dailyWeatherForcast.css">
-    <link rel="stylesheet" href="./FiveDayForcast.css">
-    <script src="./dailyWeatherForcast.js" defer></script>
+    <link rel="stylesheet" href="./fiveDayForcast.css">
+    <script src="./weatherForcast.js" defer></script>
+    
+    
 </head>
 <body>
     <div>
         <div class="searchField">
-            <input id="inputID" type="text" class="searchBar" placeholder="Type in a city ">
+            <input id="inputID" type="text" class="searchBar" placeholder="Skriv in en stad">
             <button id="buttonID" class="searchBtn" type="button" > 
                 <img class="searchBtn-image" src="./images/search.png" alt="search">
             </button> 
+           
+            <button class="attributionBtn" id="attributionBtnID" type="button">
+                <img src="./images/info.png" alt="Attribution info">
+            </button>
         </div>
-        
         <div id="errorMessageID" class="errorMessage"></div>
         
         <div>
@@ -59,11 +64,34 @@
         </div>
        
         <div class="weaklyWeatherReporBoxes">
-            <div class="boxOne"></div>
-            <div class="boxTwo"></div>
-            <div class="boxThree"></div>
-            <div class="boxFour"></div>
-            <div class="boxFive"></div>
+            <div class="boxOne">
+                <div id="boxOneDateID" class="boxDay"></div>
+                <div id="boxOneTempID" class="boxTemp"></div>
+                <div id="boxOneWeatherInfoID" class="boxDesc"></div>
+            </div>
+
+
+            <div class="boxTwo">
+                <div id="boxTwoDateID" class="boxDay"></div>
+                <div id="boxTwoTempID" class="boxTemp"></div>
+                <div id="boxTwoWeatherInfoID" class="boxDesc"></div>
+
+            </div>
+            <div class="boxThree">
+                <div id="boxThreeDateID" class="boxDay"></div>
+                <div id="boxThreeTempID" class="boxTemp"></div>
+                <div id="boxThreeWeatherInfoID" class="boxDesc"></div>
+            </div>
+            <div class="boxFour">
+                <div id="boxFourDateID" class="boxDay"></div>
+                <div id="boxFourTempID" class="boxTemp"></div>
+                <div id="boxFourWeatherInfoID" class="boxDesc"></div>
+            </div>
+            <div class="boxFive">
+                <div id="boxFiveDateID" class="boxDay"></div>
+                <div id="boxFiveTempID" class="boxTemp"></div>
+                <div id="boxFiveWeatherInfoID" class="boxDesc"></div>
+            </div>
 
         </div>
     </div>
