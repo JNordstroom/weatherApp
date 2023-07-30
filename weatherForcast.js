@@ -93,6 +93,9 @@ function fetchWeatherData(lat, long, city){
         else if(data.weather[0].main == 'Snow'){
             iconElement.src = 'images/snow.png';
         }
+        else if(data.weather[0].main == 'Thunderstorm'){
+            iconElement.src = 'images/lightning.png';
+        }
         errorMessageElement.textContent = ''; 
 
         weatherInfoElement.style.display = 'block';
@@ -111,6 +114,7 @@ function searchWeatherByCity() {
         if (city) {
             fetchWeatherData(null, null, city);
             fetchFiveDayWeatherData(null, null, city);
+            document.getElementById("inputID").value = "";
         }
         else {
             console.log('Skriv in en befintlig stad')
@@ -230,6 +234,7 @@ function toggleAttibutionBox(){
     else{
         attributionBox.style.display = "block";
     }
+    
 }
 
 window.addEventListener('load', () => {
