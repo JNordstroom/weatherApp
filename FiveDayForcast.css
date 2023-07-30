@@ -60,7 +60,7 @@
 .boxDay{
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 .boxTemp{
     display: flex;

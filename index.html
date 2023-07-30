@@ -5,19 +5,22 @@
     <title>Weather Application</title>
     <link rel="stylesheet" href="./dailyWeatherForcast.css">
     <link rel="stylesheet" href="./fiveDayForcast.css">
+    <link rel="stylesheet" href="./attributionBox.css">
     <script src="./weatherForcast.js" defer></script>
     
     
 </head>
 <body>
+    
     <div>
+        
         <div class="searchField">
             <input id="inputID" type="text" class="searchBar" placeholder="Skriv in en stad">
             <button id="buttonID" class="searchBtn" type="button" > 
                 <img class="searchBtn-image" src="./images/search.png" alt="search">
             </button> 
            
-            <button class="attributionBtn" id="attributionBtnID" type="button">
+            <button class="attributionBtn" id="attributionBtnID" type="button" onclick="toggleAttibutionBox()">
                 <img src="./images/info.png" alt="Attribution info">
             </button>
         </div>
@@ -28,7 +31,7 @@
         </div>
 
         <div class="weatherBody">
-            <img id="iconID" class="sunImage" src="./images/clear.png" >
+            <img id="iconID" class="image" src="./images/clear.png" >
             
             <div class="boxColumnsWeatherBody">
                 <div class="tempAndDegrees">
@@ -39,6 +42,7 @@
                 <div id="weatherInfoID" class="weatherInfo"></div>
                 
             </div> 
+            
         </div>
         
         <div><hr class="lineBreak"></div>
@@ -94,6 +98,22 @@
             </div>
 
         </div>
+        <div class="attributionBox">
+            <div>
+                <ul>
+                    <p class="attributionHeadline">Attributions</p>
+                    <li><a href="https://www.pexels.com/photo/blue-and-green-sky-and-mountain-3617500/" title="Background picture"> Background photo by Benjamin Suter</a></li>
+                    <li><a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons created by Catalin Fertu - Flaticon</a></li> 
+                    <li><a href="https://www.flaticon.com/free-icons/info" title="info icons">Info icons created by Pixel perfect - Flaticon</a></li>
+                    <li><a href="https://www.freepik.com/">Weather icons</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=MIYQR-Ybrn4">Inspiration</a></li>
+                    <p class="thanksMessage">Thanks!</p>
+                </ul>
+                
+            </div>
+            
+        </div>
+        
     </div>
     
 

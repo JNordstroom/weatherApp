@@ -1,0 +1,30 @@
+.attributionBox{
+    height: 160px;
+    width: 600px;
+    margin-left: 100px;
+    margin-top: 30px;
+    border: 2px solid;
+    background: #ffffffad;
+    border-color: #ffffff38;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+    display: none;
+}
+ul{
+    margin-left: 100px;
+    margin-top: -10px;
+}
+li{
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: black; 
+}
+.attributionHeadline{
+    text-decoration: underline;
+    margin-left: 21%;
+}
+.thanksMessage {
+    margin-top: 10px;
+    margin-left: 25%;
+}

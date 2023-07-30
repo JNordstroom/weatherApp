@@ -217,9 +217,20 @@ function fetchFiveDayWeatherData(lat, long, city){
     });
 }
 
-//Attribution fönster
+//Attribution popoup
 
 
+function toggleAttibutionBox(){
+    var attributionBox = document.querySelector('.attributionBox');
+
+    if( attributionBox.style.display === "block"){
+        attributionBox.style.display ="none";
+
+    }
+    else{
+        attributionBox.style.display = "block";
+    }
+}
 
 window.addEventListener('load', () => {
   errorMessageElement = document.getElementById('errorMessageID');
